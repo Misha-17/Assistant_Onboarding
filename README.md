@@ -429,7 +429,7 @@ $$
 h_b = \mathrm{SHA256}(\mathrm{UTF8}(b)).
 $$
 
-A passage is an exact slice $p=b[a:z]$ with $0\leq a<z\leq |b|$. Its identity hashes the schema, block ID, block hash, and the two offsets using canonical JSON. File-level SHA-256 separately identifies the original file bytes. Exactness refers to **indexed extracted text**; extraction/OCR can differ from the visual source file.
+A passage is an exact slice $p=b[a:z]$ with $0\leq a\lt z\leq |b|$. Its identity hashes the schema, block ID, block hash, and the two offsets using canonical JSON. File-level SHA-256 separately identifies the original file bytes. Exactness refers to **indexed extracted text**; extraction/OCR can differ from the visual source file.
 
 E5 token offsets determine passage boundaries: at most **384 content tokens**, **64 tokens overlap**, and therefore stride $384-64=320$. A nonempty block with $n$ token offsets uses
 
@@ -537,7 +537,7 @@ An evidence expansion uses budget $\min(12000,\lfloor C/2\rfloor)$, retains prio
 The external generator supplies an autoregressive conditional distribution
 
 $$
-P_\theta(y\mid x)=\prod_{t=1}^{|y|}P_\theta(y_t\mid x,y_{<t}),
+P_\theta(y\mid x)=\prod_{t=1}^{|y|}P_\theta(y_t\mid x,y_{\lt t}),
 $$
 
 where $x$ is the rendered stage prompt and $\theta$ is the already trained model. SISU does not modify $\theta$. Planning receives the question; drafting receives the question, facets and evidence; review receives those plus the draft. JSON schemas constrain output structure, and the application validates records after generation.
@@ -650,7 +650,7 @@ $$
 \land\mathrm{MatchingAllow}(u,r,a).
 $$
 
-User and group grants are time-filtered; intervals use $t\geq t_{\mathrm{from}}$ and $t<t_{\mathrm{until}}$. The implementation additionally permits an authorized user to read their own trace through the designated owner rule when no denial applies. For document answering, the allowed set is the intersection of search, read and cite permissions. Permissions and corpus generation are rechecked during answering and release. Session hints clear when principal or authorization revision changes.
+User and group grants are time-filtered; intervals use $t\geq t_{\mathrm{from}}$ and $t\lt t_{\mathrm{until}}$. The implementation additionally permits an authorized user to read their own trace through the designated owner rule when no denial applies. For document answering, the allowed set is the intersection of search, read and cite permissions. Permissions and corpus generation are rechecked during answering and release. Session hints clear when principal or authorization revision changes.
 
 Implementation: [access.py](sisu_reader/access.py), [session.py](sisu_reader/session.py), [trace_store.py](sisu_reader/trace_store.py).
 
