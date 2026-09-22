@@ -161,8 +161,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "685fba66fee09da8d059d7cbf7a783d256e006f84916d87e25906581342c34c5",
-      "bytes": 50476
+      "sha256": "b1f8524d0b1661f84fa07959a3b5534139d591fe418115e61998b8e4d2276451",
+      "bytes": 50368
     },
     {
       "path": "requirements-audit.txt",

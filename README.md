@@ -426,7 +426,7 @@ This section specifies the mathematical operations in the **active V10 document 
 Each extracted block is canonical text $b$ with a source document revision, locator and character offsets. A block hash is
 
 $$
-h_b = \operatorname{SHA256}(\operatorname{UTF8}(b)).
+h_b = \mathrm{SHA256}(\mathrm{UTF8}(b)).
 $$
 
 A passage is an exact slice $p=b[a:z]$ with $0\leq a<z\leq |b|$. Its identity hashes the schema, block ID, block hash, and the two offsets using canonical JSON. File-level SHA-256 separately identifies the original file bytes. Exactness refers to **indexed extracted text**; extraction/OCR can differ from the visual source file.
@@ -439,7 +439,7 @@ $$
 
 The last passage ends at the block end. Whitespace boundaries remain exact source slices. Empty blocks yield no passage. With no encoder, the explicit lexical fallback instead uses 160 whitespace-delimited words and 32-word overlap. The fallback is not described as E5 tokenization.
 
-The encoder's identity includes the pinned weight/tokenizer manifest, pooling implementation and relevant library versions. Cached vectors use $(\text{encoder identity}, \operatorname{SHA256}(\text{embedding input}))$ as the key; stored vector bytes have their own integrity hash.
+The encoder's identity includes the pinned weight/tokenizer manifest, pooling implementation and relevant library versions. Cached vectors use $(\text{encoder identity}, \mathrm{SHA256}(\text{embedding input}))$ as the key; stored vector bytes have their own integrity hash.
 
 Implementation: [corpus.py](sisu_reader/corpus.py), [hybrid_retrieval.py](sisu_reader/hybrid_retrieval.py).
 
@@ -469,12 +469,12 @@ Let $\mathcal{P}_u$ be the authorized passages for user $u$ and $N=|\mathcal{P}_
 Let $f(t,p)$ be the term frequency, $|p|$ the resulting lexical token count, $\overline L$ the mean authorized passage length, and $df_u(t)$ the count of authorized passages containing $t$. Then
 
 $$
-\operatorname{IDF}_u(t)=\ln\left(1+\frac{N-df_u(t)+0.5}{df_u(t)+0.5}\right),
+\mathrm{IDF}_u(t)=\ln\left(1+\frac{N-df_u(t)+0.5}{df_u(t)+0.5}\right),
 $$
 
 $$
-s_{\text{BM25}}(q,p)=\sum_{t\in\operatorname{unique}(q)}
-\operatorname{IDF}_u(t)
+s_{\text{BM25}}(q,p)=\sum_{t\in\mathrm{unique}(q)}
+\mathrm{IDF}_u(t)
 \frac{f(t,p)(k_1+1)}{f(t,p)+k_1(1-b+b|p|/\overline L)},
 \qquad k_1=1.2,\quad b=0.75.
 $$
@@ -487,7 +487,7 @@ For facet $f$, form a deduplicated query group $Q_f$ from the effective original
 
 $$
 R_f(p)=\sum_{q\in Q_f}\sum_{\ell\in\{\mathrm{BM25},\mathrm{dense}\}}
-\frac{\mathbf{1}[p\text{ occurs in lane }(q,\ell)]}{60+\operatorname{rank}_{q,\ell}(p)}.
+\frac{\mathbf{1}[p\text{ occurs in lane }(q,\ell)]}{60+\mathrm{rank}_{q,\ell}(p)}.
 $$
 
 No term is added when a passage is absent from a lane. If dense retrieval is unavailable, only BM25 contributes. All queries and lanes have equal weights. Keep the top 32 fused candidates per facet; ties use the stable passage index. Fusion avoids comparing raw BM25 units with cosine similarity units.
@@ -504,7 +504,7 @@ where $C$ is the configured model context. The retrieval module's estimated pass
 
 $$
 c(p)=32+\widehat T(p.\mathrm{text})+
-\widehat T(\operatorname{JSON}([p.\mathrm{title},p.\mathrm{locator},p.\mathrm{headers}])).
+\widehat T(\mathrm{JSON}([p.\mathrm{title},p.\mathrm{locator},p.\mathrm{headers}])).
 $$
 
 Here $\widehat T$ is the conservative scheduling estimator defined below. The algorithm is greedy, not an optimizer claiming a provably optimal evidence set:
@@ -513,10 +513,10 @@ Here $\widehat T$ is the conservative scheduling estimator defined below. The al
 2. Repeatedly select the remaining candidate with largest adjusted score
 
 $$
-A_f(p)=\frac{R_f(p)}{1+0.12\,n_{\operatorname{doc}(p)}},
+A_f(p)=\frac{R_f(p)}{1+0.12\,n_{\mathrm{doc}(p)}},
 $$
 
-where $n_{\operatorname{doc}(p)}$ is the count already admitted from that document. This softly favors diversity; it is not a hard per-document quota.
+where $n_{\mathrm{doc}(p)}$ is the count already admitted from that document. This softly favors diversity; it is not a hard per-document quota.
 
 3. During that ranked pass, use ceiling $\max(U,\lfloor0.8B\rfloor)$, where $U$ is cost already admitted. This aims to leave about 20% for context; facet-first selections can already consume more than 80%.
 4. Attempt adjacent passages of the same block, then edge passages of neighboring blocks in the same section or a table header. Each remains a separate immutable source span.
@@ -554,7 +554,7 @@ For selected source alias $P_i$, the binder takes $b[a:z]$ directly from the ind
 
 $$
 \mathrm{quote}=b[a:z],\qquad
-\mathrm{quoteHash}=\operatorname{SHA256}(\operatorname{UTF8}(\mathrm{quote})).
+\mathrm{quoteHash}=\mathrm{SHA256}(\mathrm{UTF8}(\mathrm{quote})).
 $$
 
 The invariants establish where the text came from:
@@ -567,7 +567,7 @@ $$
 The semantic review proposes unsupported claim IDs, missing facet IDs and up to six focused searches. It is a model judgment, not a theorem prover or an independent correctness label. The audit is attached to an identity
 
 $$
-h_A=\operatorname{SHA256}(\operatorname{JSON}(\mathrm{claims},\mathrm{missingFacets},\mathrm{bindingPolicy},\mathrm{evidence})).
+h_A=\mathrm{SHA256}(\mathrm{JSON}(\mathrm{claims},\mathrm{missingFacets},\mathrm{bindingPolicy},\mathrm{evidence})).
 $$
 
 An audit only applies when this identity matches the current draft and evidence. Let $F$ be the set of existing claim IDs flagged by a valid audit, and let $\sigma(c)$ contain the exact claim text, sorted facet IDs, and sorted absolute source-span bindings. A revised draft is accepted only if
@@ -590,8 +590,8 @@ $$
 \begin{cases}
 |s| & \text{ASCII alphanumeric run containing a digit},\\
 \lceil |s|/4\rceil & \text{ASCII alphabetic run},\\
-\max(1,\lceil|\operatorname{UTF8}(s)|/4\rceil) & \text{whitespace},\\
-|\operatorname{UTF8}(s)| & \text{other piece}.
+\max(1,\lceil|\mathrm{UTF8}(s)|/4\rceil) & \text{whitespace},\\
+|\mathrm{UTF8}(s)| & \text{other piece}.
 \end{cases}
 $$
 
@@ -599,7 +599,7 @@ Sum this over pieces. It is a conservative **estimate**, not a model-specific to
 
 $$
 128+\sum_{m\in M}\widehat T(m.\mathrm{content})+
-\widehat T(\operatorname{JSON}(\mathrm{schema}))+O+H+512\leq C,
+\widehat T(\mathrm{JSON}(\mathrm{schema}))+O+H+512\leq C,
 $$
 
 where $M$ is the rendered message list, $O$ the output reserve, and $H$ extra headroom. For a prospective audit before drafting, $H$ reserves the forthcoming draft plus 512 tokens. If initial evidence is too large, binary search retains the longest fitting selected prefix without shortening or joining passages. The actual generated audit prompt is measured again. A typed provider context-overflow error is recognized and not retried unchanged.
@@ -644,7 +644,7 @@ The application reports passages actually presented to successful model calls. A
 For a concrete protected resource $r$, action $a$, and user $u$, the ordinary authorization rule is
 
 $$
-\operatorname{Can}(u,r,a)=
+\mathrm{Can}(u,r,a)=
 \mathrm{ActiveUser}(u)\land\mathrm{ActiveResource}(r)\land
 \mathrm{RoleCapability}(u,a)\land\neg\mathrm{MatchingDeny}(u,r,a)
 \land\mathrm{MatchingAllow}(u,r,a).
