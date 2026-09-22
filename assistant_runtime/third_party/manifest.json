@@ -1,0 +1,12 @@
+[
+  {
+    "artifact": "MiniCheck_CODE_LICENSE.txt",
+    "source": "sisu_reader_research\\research_results\\adaptive_20260915\\minicheck_cpu\\flan_cache\\upstream--b58b9fa69acbd1015ec970fa65dd752413a053d2\\LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "artifact": "MiniCheck_Flan_MODEL_CARD.md",
+    "source": "sisu_reader_research\\research_results\\adaptive_20260915\\minicheck_cpu\\flan_cache\\MiniCheck-Flan-T5-Large--96eafd01cee2d16cf81aaa2fb226b14f422a37b3\\README.md",
+    "sha256": "2e5128482878408f4f2e3f21388ca313f9fc61ba3242539d0aabf6a85eede683"
+  }
+]

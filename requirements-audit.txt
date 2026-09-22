@@ -1,0 +1,9 @@
+# Optional isolated MiniCheck environment only; do not install into the main venv.
+# The existing audited worker pins this CUDA wheel's identity but runs on CPU.
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
+transformers==5.15.0
+tokenizers==0.22.2
+huggingface-hub==1.27.0
+safetensors==0.8.0
+psutil==7.2.2

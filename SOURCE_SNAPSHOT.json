@@ -1,0 +1,367 @@
+{
+  "source_version": "general_v10 grounded-answer-v10.4",
+  "files": [
+    {
+      "path": "sisu_reader/access.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/access.py",
+      "sha256": "973942e19481d11e67c10eb285ddab6e1383a3cb6eafb1fb00c39252a090b0a4"
+    },
+    {
+      "path": "sisu_reader/adaptive_controller.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/adaptive_controller.py",
+      "sha256": "9eda073a2eb0c77af15cd8711ecd076171edbeef02506529b326245d83ef70a0"
+    },
+    {
+      "path": "sisu_reader/answer_budget.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/answer_budget.py",
+      "sha256": "ec9131deb82a8b6727959e819fabf731b9262ab8b09e40754e26e966b040e227"
+    },
+    {
+      "path": "sisu_reader/broker.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/broker.py",
+      "sha256": "0739304e0237e6c8f7443d5250e0807a27396ed9f731ac7c2c13c7581548bb54"
+    },
+    {
+      "path": "sisu_reader/cli.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/cli.py",
+      "sha256": "bfee74dbfab630dcb2d379156aa08e5e8cf441a78e39ba079f0581adbb4594d0"
+    },
+    {
+      "path": "sisu_reader/config.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/config.py",
+      "sha256": "1cee7451a7f9b61ad636877c71dbe79f7bcb3c3e523a38854d5fe052e61b6fc6"
+    },
+    {
+      "path": "sisu_reader/corpus.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/corpus.py",
+      "sha256": "f57e36e03013a07aa8dcbb4dc956419a9c9c84e4c4ebedd6da64c0edc0f45275"
+    },
+    {
+      "path": "sisu_reader/efficiency_gate.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/efficiency_gate.py",
+      "sha256": "f9c16d68d23a455770e911295e602dfc2641b9006683843db0bfd81a62b47773"
+    },
+    {
+      "path": "sisu_reader/engine.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/engine.py",
+      "sha256": "7203f2c6792e6fe613dd5723ed789896e69f5ede8a4c121147d2beb22b5dec54"
+    },
+    {
+      "path": "sisu_reader/evaluation.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/evaluation.py",
+      "sha256": "03bc1c466e4e7563b746b0197eed41b7c7d8b7ce4d0be32ade7213644ef563e3"
+    },
+    {
+      "path": "sisu_reader/evidence_markers.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/evidence_markers.py",
+      "sha256": "ad4d0f1b0fd585ecabeba401daf18d0ae10cefe47a8393ccefdaa9478dc892ca"
+    },
+    {
+      "path": "sisu_reader/evidence_review.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/evidence_review.py",
+      "sha256": "2ada53d3686c724c0e133199ed0b735132f28c600d2dc4ff2d47c2c16c8347ac"
+    },
+    {
+      "path": "sisu_reader/excerpt_citations.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/excerpt_citations.py",
+      "sha256": "220766d2f99dd693f3403772c1ca102fd9a17dac9ae2b655e9ba199e6e7c4ac9"
+    },
+    {
+      "path": "sisu_reader/focused_literals.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/focused_literals.py",
+      "sha256": "443cf69161778c45a5d4347a789e08ac7d242170d1e61584a93e933cb55eb82e"
+    },
+    {
+      "path": "sisu_reader/grounded_answer.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/grounded_answer.py",
+      "sha256": "08113d86068c0f14de025929410c2aa723c435a22a874c2619942b02e3f21cd1"
+    },
+    {
+      "path": "sisu_reader/hybrid_retrieval.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/hybrid_retrieval.py",
+      "sha256": "38139f411a1b07f54ad9611e90a0d351726615a723e489e023ab5a7d3216e359"
+    },
+    {
+      "path": "sisu_reader/identity.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/identity.py",
+      "sha256": "0ac69d948af1cb0495004b783b195c9fbaa3cae308975c9fc1eb91fbcfa3fc39"
+    },
+    {
+      "path": "sisu_reader/inferred_reference_anchors.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/inferred_reference_anchors.py",
+      "sha256": "099d6c5d58197ee980b0f250691e65fc737e706f01ef4223e7705b5c1341872f"
+    },
+    {
+      "path": "sisu_reader/learning_cli.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/learning_cli.py",
+      "sha256": "a8cde242761d728a02000360fc87cd1700ee5ee5c396225198c9be695922e3d0"
+    },
+    {
+      "path": "sisu_reader/learning_policy.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/learning_policy.py",
+      "sha256": "aec3e5657fa2ff9a38619b583738306540b096845ee4f670560a2b21ac591b47"
+    },
+    {
+      "path": "sisu_reader/legacy_engine.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/legacy_engine.py",
+      "sha256": "103ed710832234e077ba8054826b66f443802d9aafda135adaa99f4f0aa87640"
+    },
+    {
+      "path": "sisu_reader/local_pdf_ocr.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/local_pdf_ocr.py",
+      "sha256": "09469f384d71364d03bf84f45cec70e2595881b8a5152db2f43a5186c4ec95a9"
+    },
+    {
+      "path": "sisu_reader/models.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/models.py",
+      "sha256": "a73615706d895fa35194086fd5899796690313a202fe072dd3bb95c8245ff803"
+    },
+    {
+      "path": "sisu_reader/navigation_priority.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/navigation_priority.py",
+      "sha256": "ca4c0239d83955c2da12cc9137db5837db6155b72fc499bbdd992fca6dd5633e"
+    },
+    {
+      "path": "sisu_reader/ollama.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/ollama.py",
+      "sha256": "2a6b7f04d9545c8a86500b76db9f6367c4f2814e4dba9a2ff0d95a63814ac5a1"
+    },
+    {
+      "path": "sisu_reader/reference_closure.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/reference_closure.py",
+      "sha256": "124917f8e0f897a07c660c61c4b209529869637174a6204581c93c93f9eaebe5"
+    },
+    {
+      "path": "sisu_reader/reference_demo.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/reference_demo.py",
+      "sha256": "9c2691ee7b771b74c6efb2d4c636df001fbca0b2d4bb2ae44e1a31ab7e4eab08"
+    },
+    {
+      "path": "sisu_reader/reference_evaluation.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/reference_evaluation.py",
+      "sha256": "b49eeff008c6250c4dae60ec67e505bb9c2e79287fcb3721d1e082322ace8c4e"
+    },
+    {
+      "path": "sisu_reader/reference_units.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/reference_units.py",
+      "sha256": "42e2f47de4c89a8b880e33d782d1cb7ac2bfaed97f058fe3a92d1d9d37bdbcb9"
+    },
+    {
+      "path": "sisu_reader/release.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/release.py",
+      "sha256": "f9d6a1ad67536ff1fb0df5600b817b188ad6fd5784e54f9332b4eaa510126bcb"
+    },
+    {
+      "path": "sisu_reader/research_budgets.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/research_budgets.py",
+      "sha256": "0bbcc20785c704dba3f36856c00e466acb1265b974c59bdf8388667d80711ada"
+    },
+    {
+      "path": "sisu_reader/resources.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/resources.py",
+      "sha256": "b922990e490fdebc6e6be65fbe8898ead9127aa540cd264db59ecd48e11f2ef6"
+    },
+    {
+      "path": "sisu_reader/review_output.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/review_output.py",
+      "sha256": "a18e69668966faf537dc668f111107bc2e47376f0ab5df0807b0e0e86372ff50"
+    },
+    {
+      "path": "sisu_reader/revisit_blocks.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/revisit_blocks.py",
+      "sha256": "2e8b0ee358fdc7d07c2fed5c034ba554be188242d9e0f2e221021e45ba68717e"
+    },
+    {
+      "path": "sisu_reader/roles.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/roles.py",
+      "sha256": "2ad5353b31caf1802240e0c11410514fb931deec5493dda3ad4e7345cc0d0a61"
+    },
+    {
+      "path": "sisu_reader/role_output.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/role_output.py",
+      "sha256": "d8775d930573b266369a5f96330576c67bd2caf055f6a71922582d7cbf105e12"
+    },
+    {
+      "path": "sisu_reader/runtime_compatibility.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/runtime_compatibility.py",
+      "sha256": "645187e5abb42273f79e9446419062c44ed3a73d77dcadebba1f425b6f86d5d2"
+    },
+    {
+      "path": "sisu_reader/screen_budget.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/screen_budget.py",
+      "sha256": "b923942af60b9eba7347a0d15b87ddba6aa0c1c5bd193fa755fd42d606c44744"
+    },
+    {
+      "path": "sisu_reader/session.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/session.py",
+      "sha256": "7ae771a6f5f109ebe50164a54b307f8c7cfd09de44d770fd83bf6212611e2469"
+    },
+    {
+      "path": "sisu_reader/source_excerpt_recovery.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/source_excerpt_recovery.py",
+      "sha256": "2cab8f48af4ebce50b1f5efd68b544a537e8fdc1a5a4c04644056f9d94778740"
+    },
+    {
+      "path": "sisu_reader/source_priority.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/source_priority.py",
+      "sha256": "13fd51b67d70f470debeb3f0294c1f07431f8641e6cf080aacca02ce1b2e4fe5"
+    },
+    {
+      "path": "sisu_reader/store.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/store.py",
+      "sha256": "9458dc4c88fb5a53a90025ea81971c1a88addeee0143701329d1f28a2e2caebd"
+    },
+    {
+      "path": "sisu_reader/strategy_learning.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/strategy_learning.py",
+      "sha256": "084998ca3a1f04986514517b2a7a7f12bc1238e2c784ca3fc029a5d4bd90334b"
+    },
+    {
+      "path": "sisu_reader/strategy_validation.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/strategy_validation.py",
+      "sha256": "c88ea76216c328119d8b8b63070b7b6b4ecfa2508940b20e8b4d36244bd48ba3"
+    },
+    {
+      "path": "sisu_reader/trace_store.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/trace_store.py",
+      "sha256": "d4b2c650266a1e574fb691090dbe17f3c9137a9d8007fb6bd23a145ac6281c58"
+    },
+    {
+      "path": "sisu_reader/web.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/web.py",
+      "sha256": "30ba37877da9df9902747afcb4db5a3f7af095de348cc7e8c6baa1ebf2455a13"
+    },
+    {
+      "path": "sisu_reader/windows_ocr.ps1",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/windows_ocr.ps1",
+      "sha256": "c92504daa5390792a2a0933c319a33595a72b71fa546b81bb2924d48bab1ca70"
+    },
+    {
+      "path": "sisu_reader/__init__.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/__init__.py",
+      "sha256": "08b91c94cad7d560d8f8ab89e8c320797a9137be650294c68631403aca92ceb1"
+    },
+    {
+      "path": "sisu_reader/__main__.py",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/__main__.py",
+      "sha256": "3d2438ae92f4746e9ffaa1f837b1fe803f6281091d1f31f8c95643716f257d9a"
+    },
+    {
+      "path": "sisu_reader/web_assets/app.js",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/web_assets/app.js",
+      "sha256": "a1dcee9079172c413d4ea76099f54f46bfe5a3b92e2bba6789964b5b1ec013b7"
+    },
+    {
+      "path": "sisu_reader/web_assets/index.html",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/web_assets/index.html",
+      "sha256": "80f4668998de417020ffc029900dd051e9bced1e7e26f1937b1f7b3b534dbecd"
+    },
+    {
+      "path": "sisu_reader/web_assets/styles.css",
+      "source": "sisu_reader_research/research/variants/general_v10/sisu_reader/web_assets/styles.css",
+      "sha256": "1cd43c70b90a1e92790eb9e7d32d98b1932020c21ed30629d5a32803af5110da"
+    },
+    {
+      "path": "assistant_runtime/__init__.py",
+      "source": "sisu_reader_research/assistant_runtime/__init__.py",
+      "sha256": "f269346e6ac14f2d7b19cbd44034f5a52ca1aa5f3c11c757b87f25326da62104"
+    },
+    {
+      "path": "assistant_runtime/__main__.py",
+      "source": "sisu_reader_research/assistant_runtime/__main__.py",
+      "sha256": "d904d7df6fd6d615ffcf92ee19b572732b0ff0ad2f6b6b3745bf06246e9ec5d8"
+    },
+    {
+      "path": "assistant_runtime/audit_app.py",
+      "source": "sisu_reader_research/assistant_runtime/audit_app.py",
+      "sha256": "be0fb3a6fc4131725fd6ed8c27d8ade1070fd33b2387b225deadc28c5f5f11dd"
+    },
+    {
+      "path": "assistant_runtime/service.py",
+      "source": "sisu_reader_research/assistant_runtime/service.py",
+      "sha256": "97500af86f7adbdb9d66e86ad9b2cac4014f4d162f91cdc779439a98fe3d9df9"
+    },
+    {
+      "path": "assistant_runtime/web_assets/app.js",
+      "source": "sisu_reader_research/assistant_runtime/web_assets/app.js",
+      "sha256": "3df4992af1cd65eb4ac64d2ddf82a634f08441046ced045872b1ddadc0a4d2e0"
+    },
+    {
+      "path": "assistant_runtime/web_assets/index.html",
+      "source": "sisu_reader_research/assistant_runtime/web_assets/index.html",
+      "sha256": "01d59d09e804915f98e385daaca221b00015393566329b430311383f584ef752"
+    },
+    {
+      "path": "assistant_runtime/web_assets/styles.css",
+      "source": "sisu_reader_research/assistant_runtime/web_assets/styles.css",
+      "sha256": "7e5a9bddafd22bbdb45021fcb29cc4ca1d8ce190d18e6a8293307973b530078b"
+    },
+    {
+      "path": "assistant_runtime/support/support_client.py",
+      "source": "sisu_reader_research/assistant_runtime/support/support_client.py",
+      "sha256": "ca7141aa1762361466b55ab5f5887aa6de30636d9c2859522b1de5c1a98b4ff5"
+    },
+    {
+      "path": "assistant_runtime/support/support_contract.py",
+      "source": "sisu_reader_research/assistant_runtime/support/support_contract.py",
+      "sha256": "afa021afbef35aa214cd1738373406c4380312120dcb9e94efeee2166304d1a5"
+    },
+    {
+      "path": "assistant_runtime/support/support_planner.py",
+      "source": "sisu_reader_research/assistant_runtime/support/support_planner.py",
+      "sha256": "32adf8f5f35e5b15ac378499b98353d6940b184ad557686865e44be6427591c0"
+    },
+    {
+      "path": "assistant_runtime/support/support_worker.py",
+      "source": "sisu_reader_research/assistant_runtime/support/support_worker.py",
+      "sha256": "ec624d8937d377c90f85286a730b09d418770f1a60f254ea27ae2305a46fe5af"
+    },
+    {
+      "path": "assistant_runtime/third_party/ATTRIBUTION.md",
+      "source": "sisu_reader_research/assistant_runtime/third_party/ATTRIBUTION.md",
+      "sha256": "787f44b29f8e7fc5e232fa4a4bbeab880f99c8131fb5b93a5036a78af3d55e4f"
+    },
+    {
+      "path": "assistant_runtime/third_party/manifest.json",
+      "source": "sisu_reader_research/assistant_runtime/third_party/manifest.json",
+      "sha256": "b5521d957fc40b321ffe9bf50e369b57c99560fde6886674449d21a9a57ce977"
+    },
+    {
+      "path": "assistant_runtime/third_party/MiniCheck_CODE_LICENSE.txt",
+      "source": "sisu_reader_research/assistant_runtime/third_party/MiniCheck_CODE_LICENSE.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "assistant_runtime/third_party/MiniCheck_Flan_MODEL_CARD.md",
+      "source": "sisu_reader_research/assistant_runtime/third_party/MiniCheck_Flan_MODEL_CARD.md",
+      "sha256": "2e5128482878408f4f2e3f21388ca313f9fc61ba3242539d0aabf6a85eede683"
+    },
+    {
+      "path": "tests/test_general_budget.py",
+      "source": "sisu_reader_research/research/variants/general_v10/tests/test_general_budget.py",
+      "sha256": "7c034768b2669f2fd1c931442a2c9fb98db1dbaf53539fc8ed5220db4a3605e9"
+    },
+    {
+      "path": "tests/test_general_engine.py",
+      "source": "sisu_reader_research/research/variants/general_v10/tests/test_general_engine.py",
+      "sha256": "63ce0998f7168a1b7674b6e9747aafbc32195a3d0ddaea52dd10fbd4bd7db85d"
+    },
+    {
+      "path": "tests/test_grounded_answer.py",
+      "source": "sisu_reader_research/research/variants/general_v10/tests/test_grounded_answer.py",
+      "sha256": "bcf991f2da0972a3d669173955dce3ea2007f51611ba5006045a2683d22f3164"
+    },
+    {
+      "path": "tests/test_hybrid_retrieval.py",
+      "source": "sisu_reader_research/research/variants/general_v10/tests/test_hybrid_retrieval.py",
+      "sha256": "3381fde1551b1bdf241e89fa0c4b1ce19008f93574fbe1c9b98ee4b5a4aafb14"
+    },
+    {
+      "path": "model_manifests/multilingual-e5-small.json",
+      "source": "sisu_reader_research/research_models/multilingual-e5-small/manifest.json",
+      "sha256": "6f82019861d2e9108e280391f1524c2c1736d8257fdcee5fc00769074bf117c0"
+    }
+  ],
+  "schema": "sisu.upstream_source_snapshot.v1",
+  "hash_scope": "sha256 records original source bytes before the explicitly listed packaging path changes. PACKAGING.json records final exported bytes."
+}

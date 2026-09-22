@@ -1,0 +1,44 @@
+# Local environments and editor state
+.venv/
+.audit-venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Private runtime data and downloaded assets
+workspace/
+assistant_workspace/
+workspaces/
+models/
+research_models/
+research_results/
+test_corpora/
+traces/
+cache/
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.log
+*.lock
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.bin
+.env
+.env.*
+!.env.example
+
+# Builds
+build/
+dist/
+*.egg-info/

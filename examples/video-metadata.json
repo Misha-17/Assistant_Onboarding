@@ -1,0 +1,14 @@
+{
+  "video_id": "video:example-onboarding",
+  "external_id": "example-onboarding",
+  "title": "Example onboarding walkthrough",
+  "path": "https://example.org/onboarding-video",
+  "speaker": "Example Presenter",
+  "project": "Example Project",
+  "duration": "20:00",
+  "tags": ["onboarding", "access"],
+  "classification": "internal",
+  "chapters": [
+    {"title": "Requesting access", "start": "02:00", "end": "05:00", "keywords": ["access", "approval"]}
+  ]
+}

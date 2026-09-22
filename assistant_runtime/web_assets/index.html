@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#fbf8f6">
+  <title>SISU Reader</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%237b56ac'/%3E%3Ctext x='10' y='24' font-family='serif' font-size='26' font-weight='bold' fill='white'%3Es%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="SISU Reader controls">
+      <a class="brand" href="/" aria-label="SISU Reader home">
+        <span class="brand-mark" aria-hidden="true">s</span>
+        <span class="brand-name"><strong>sisu</strong><small>reader</small></span>
+      </a>
+
+      <button class="new-button" id="new-conversation" type="button">
+        <span aria-hidden="true">&#43;</span> New chat
+      </button>
+
+      <section class="pipeline-card" aria-labelledby="pipeline-title">
+        <div class="pipeline-heading">
+          <p class="eyebrow" id="pipeline-title">RESEARCH</p>
+          <span class="local-chip">local</span>
+        </div>
+        <ol class="pipeline" id="pipeline">
+          <li data-stage="authorizing" aria-label="Authorizing documents"><span>1</span><div><strong>Secure</strong><small>Checking access</small></div></li>
+          <li data-stage="exact_search" aria-label="Searching exact terms"><span>2</span><div><strong>Search</strong><small>Finding exact terms</small></div></li>
+          <li data-stage="screening" aria-label="Screening documents"><span>3</span><div><strong>Screen</strong><small>Choosing documents</small></div></li>
+          <li data-stage="reading" aria-label="Reading sources"><span>4</span><div><strong>Read</strong><small>Reading sources</small></div></li>
+          <li data-stage="synthesizing" aria-label="Writing answer"><span>5</span><div><strong>Write</strong><small>Building the answer</small></div></li>
+          <li data-stage="binding_citations" aria-label="Linking citations"><span>6</span><div><strong>Cite</strong><small>Linking citations</small></div></li>
+        </ol>
+      </section>
+
+      <section class="engine-card" id="engine-card" aria-live="polite">
+        <div class="engine-state">
+          <span class="status-dot" id="status-dot"></span>
+          <div><strong id="status-label">Starting locally...</strong><small id="status-detail">Loading your library.</small></div>
+        </div>
+        <div class="engine-action" id="engine-action" hidden>
+          <p id="engine-message"></p>
+          <code id="engine-command"></code>
+          <div class="engine-buttons">
+            <button id="copy-command" type="button">Copy command</button>
+            <button id="retry-engine" type="button">Retry</button>
+          </div>
+        </div>
+      </section>
+    </aside>
+
+    <main class="main-panel">
+      <header class="mobile-header">
+        <div class="brand compact"><span class="brand-mark" aria-hidden="true">s</span><span class="brand-name"><strong>sisu</strong><small>reader</small></span></div>
+        <div class="mobile-actions">
+          <button id="mobile-details" class="icon-button" type="button" aria-label="Open answer details"><span aria-hidden="true">&#8943;</span></button>
+          <button id="mobile-new" class="icon-button" type="button" aria-label="New conversation"><span aria-hidden="true">&#43;</span></button>
+        </div>
+      </header>
+
+      <div class="engine-banner" id="engine-banner" role="status" hidden>
+        <div><strong id="banner-title"></strong><span id="banner-text"></span></div>
+        <button id="banner-retry" type="button">Retry</button>
+      </div>
+
+      <section class="conversation" id="conversation" aria-label="Conversation">
+        <div class="welcome" id="welcome">
+          <div class="welcome-mark" aria-hidden="true"><span>s</span><span>&#10022;</span></div>
+          <h1>What shall we find?</h1>
+          <div class="suggestions" aria-label="Example questions">
+            <button type="button" data-question="Summarize these documents"><span aria-hidden="true">&#10022;</span> Summarize these documents</button>
+            <button type="button" data-question="Which rules have exceptions?"><span aria-hidden="true">&#8594;</span> Which rules have exceptions?</button>
+            <button type="button" data-question="Find conflicting figures"><span aria-hidden="true">&#8776;</span> Find conflicting figures</button>
+          </div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+
+      <div class="composer-wrap">
+        <form class="composer" id="composer">
+          <label class="sr-only" for="question">Ask your documents</label>
+          <textarea id="question" maxlength="4000" rows="1" placeholder="Ask your documents..." autocomplete="off"></textarea>
+          <div class="composer-footer">
+            <button id="send" type="submit">Ask <span aria-hidden="true">&#8593;</span></button>
+          </div>
+        </form>
+        <p class="local-note"><span aria-hidden="true">&#9679;</span> Private &amp; local</p>
+      </div>
+    </main>
+
+    <aside class="inspector" id="inspector" aria-label="Answer details" aria-hidden="true" inert>
+      <div class="inspector-head">
+        <div><p class="eyebrow">ANSWER NOTES</p><h2>Evidence</h2></div>
+        <button class="icon-button inspector-close" id="inspector-close" type="button" aria-label="Close details">&#215;</button>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Answer details">
+        <button id="sources-tab" type="button" role="tab" aria-selected="true" aria-controls="sources-panel">Citations <span id="source-count">0</span></button>
+        <button id="coverage-tab" type="button" role="tab" aria-selected="false" aria-controls="coverage-panel">Coverage</button>
+        <button id="run-tab" type="button" role="tab" aria-selected="false" aria-controls="run-panel">Run</button>
+      </div>
+
+      <section class="detail-panel" id="sources-panel" role="tabpanel" aria-labelledby="sources-tab">
+        <div class="empty-state" id="sources-empty"><span aria-hidden="true">&#8981;</span><strong>Citations appear here</strong></div>
+        <div class="source-list" id="source-list"></div>
+      </section>
+
+      <section class="detail-panel" id="coverage-panel" role="tabpanel" aria-labelledby="coverage-tab" hidden>
+        <div class="empty-state" id="coverage-empty"><span aria-hidden="true">&#9673;</span><strong>Coverage appears here</strong></div>
+        <div class="coverage-content" id="coverage-content"></div>
+      </section>
+
+      <section class="detail-panel" id="run-panel" role="tabpanel" aria-labelledby="run-tab" hidden>
+        <div class="empty-state" id="run-empty"><span aria-hidden="true">&#8943;</span><strong>Run details appear here</strong></div>
+        <div class="run-content" id="run-content"></div>
+      </section>
+    </aside>
+  </div>
+
+  <div class="backdrop" id="backdrop" hidden></div>
+  <div class="toast-region" id="toasts" aria-live="assertive"></div>
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+if [ ! -x "$SCRIPT_DIR/.venv/bin/python" ]; then
+    echo "Create .venv and install requirements.txt first. See README.md." >&2
+    exit 1
+fi
+exec "$SCRIPT_DIR/.venv/bin/python" -B "$SCRIPT_DIR/run_assistant.py" "$@"

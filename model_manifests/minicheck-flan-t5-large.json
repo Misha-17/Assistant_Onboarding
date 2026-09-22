@@ -1,0 +1,79 @@
+{
+  "repository": "lytang/MiniCheck-Flan-T5-Large",
+  "revision": "96eafd01cee2d16cf81aaa2fb226b14f422a37b3",
+  "local_path": "model",
+  "files": [
+    {
+      "name": "README.md",
+      "sha256": "2e5128482878408f4f2e3f21388ca313f9fc61ba3242539d0aabf6a85eede683",
+      "bytes": 4834,
+      "official_lfs_sha256": null
+    },
+    {
+      "name": "config.json",
+      "sha256": "d8e91aa8739d845d2572fa8db9cb6523d06208c14fedb8f7623f49283a305653",
+      "bytes": 826,
+      "official_lfs_sha256": null
+    },
+    {
+      "name": "generation_config.json",
+      "sha256": "3c4ec6a75c47200afbecd413ee6719007f701821d07b6c11a6c30237d3f9c854",
+      "bytes": 112,
+      "official_lfs_sha256": null
+    },
+    {
+      "name": "special_tokens_map.json",
+      "sha256": "47389dd56434a0d7d32f736ba34e895b331461980af760e955b62d5c39912626",
+      "bytes": 2239,
+      "official_lfs_sha256": null
+    },
+    {
+      "name": "spiece.model",
+      "sha256": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+      "bytes": 791656,
+      "official_lfs_sha256": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86"
+    },
+    {
+      "name": "tokenizer.json",
+      "sha256": "ece24e1e7d9b5a26f4e68a9519b6ea1451474811b52a9da419c9145f1f458fc0",
+      "bytes": 2422290,
+      "official_lfs_sha256": null
+    },
+    {
+      "name": "tokenizer_config.json",
+      "sha256": "284a01dc7b81f159449b96cd0d8814f6da64bbdb59833fe3b8398ea36a860550",
+      "bytes": 20917,
+      "official_lfs_sha256": null
+    },
+    {
+      "name": "pytorch_model.bin",
+      "sha256": "41291881e13c6235ed47149cec903bee9493e45d9d7325587a9fa2e266c526c0",
+      "bytes": 3132786242,
+      "official_lfs_sha256": "41291881e13c6235ed47149cec903bee9493e45d9d7325587a9fa2e266c526c0"
+    }
+  ],
+  "license": "mit",
+  "upstream_commit": "b58b9fa69acbd1015ec970fa65dd752413a053d2",
+  "upstream_files": [
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "path": "README.md",
+      "sha256": "0e93835c8414847d0b349ee7830537e00d45e5d06ba55fbb6254fe14d4343776",
+      "bytes": 8826
+    },
+    {
+      "path": "minicheck/inference.py",
+      "sha256": "325292ec98f0e0902ada035d0e0d0395017082bd1b12a7a8e63e2d15df012d5a",
+      "bytes": 21084
+    },
+    {
+      "path": "minicheck/minicheck.py",
+      "sha256": "bf1f7e7dc0d4eec7633c61d9c23eee720feea8422fe757394acc678155eed9b6",
+      "bytes": 7477
+    }
+  ]
+}
